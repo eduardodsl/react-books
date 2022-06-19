@@ -1,0 +1,29 @@
+{
+    "__lang": "en",
+    "__lang_name": "English",
+    "app_title": "React Books Service",
+    "input_search": "please, input your search",
+    "author": "author",
+    "author_name": "name",
+    "top_work": "top work",
+    "work_count": "work count",
+    "top_subjects": "top subject",
+    "no_author": "no author",
+    "loading": "loading",
+    "__date_format": "%d %m %y",
+    "months": [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December"
+    ],
+    "developed_by": "Developed by %s"
+}

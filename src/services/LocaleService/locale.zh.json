@@ -1,0 +1,29 @@
+{
+    "__lang": "zh",
+    "__lang_name": "中文",
+    "app_title": "React Books 网上服务",
+    "input_search": "请输入您要搜素作家的名字",
+    "author": "作家",
+    "author_name": "名称",
+    "top_work": "顶级作品",
+    "work_count": "作品计数",
+    "top_subjects": "热门话题",
+    "no_author": "没有作家",
+    "loading": "正在加载",
+    "__date_format": "%d日 %m %y年",
+    "months": [
+        "1月",
+        "2月",
+        "3月",
+        "4月",
+        "5月",
+        "6月",
+        "7月",
+        "8月",
+        "9月",
+        "10月",
+        "11月",
+        "12月"
+    ],
+    "developed_by": "程序被%s开发的"
+}

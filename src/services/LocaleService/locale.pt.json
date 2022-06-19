@@ -1,0 +1,29 @@
+{
+    "__lang": "pt",
+    "__lang_name": "Português",
+    "app_title": "Serviço React Books",
+    "input_search": "por favor, digite o nome de um autor",
+    "author": "autor",
+    "author_name": "nome",
+    "top_work": "maior obra",
+    "work_count": "obras publicadas",
+    "top_subjects": "principais temas",
+    "no_author": "sem autor",
+    "loading": "carregando",
+    "__date_format": "%d de %m de %y",
+    "months": [
+        "Janeiro",
+        "Fevereiro",
+        "Março",
+        "Abril",
+        "Maio",
+        "Junho",
+        "Julho",
+        "Agosto",
+        "Setembro",
+        "Outubro",
+        "Novembro",
+        "Dezembro"
+    ],
+    "developed_by": "Desenvolvido por %s"
+}
