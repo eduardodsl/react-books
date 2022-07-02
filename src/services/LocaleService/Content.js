@@ -12,6 +12,7 @@ const ExampleAuthors = () => {
     
     const { setCurrentAuthorByID } = useContext( AuthorContext );
     return (<>
+        <BasicButton onClick={ () => setCurrentAuthorByID('OL93286A') } className="main-link">Machado de Assis</BasicButton>,&nbsp;
         <BasicButton onClick={ () => setCurrentAuthorByID('OL93118A') } className="main-link">Clarice Lispector</BasicButton>,&nbsp;
         <BasicButton onClick={ () => setCurrentAuthorByID('OL3778242A') } className="main-link">Yuval Noah Harari</BasicButton>,&nbsp;
         <BasicButton onClick={ () => setCurrentAuthorByID('OL26320A') } className="main-link">J.R.R Tolkien</BasicButton>,&nbsp;
@@ -76,7 +77,7 @@ const contentData = {
         <article>
             <h2>React Books 网上服务</h2>
             <p>
-                此用程序是作为 DIO/TQI 训练营挑战开发的。原来的要求是开发一个使用 Git 数据 API 的程序为了 React Hooks 培训。我决定建议一个不同的方案由于下面理由：
+                此用程序是作为 DIO/TQI 训练营挑战开发的。以前的要求是开发一个使用 Git 数据 API 的程序为了 React Hooks 培训，但是我决定建议一个不同的方案由于以下理由：
             </p>
             <ul>
                 <li>名称；</li>

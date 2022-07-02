@@ -5,11 +5,11 @@ import { AuthorContext } from '../../services/AuthorService/AuthorService';
 const SearchItems = ({ items, visible, setLoading }) => {
 
     const { currentLang } = useContext( LocaleContext );
-    const { currentAuthor, setCurrentAuthor } = useContext( AuthorContext );
+    const { setCurrentAuthorByID } = useContext( AuthorContext );
 
     const onClick = async (value) => {
         setLoading(true);
-        await setCurrentAuthor(value);
+        await setCurrentAuthorByID(value.key);
         setLoading(false);
     }
 

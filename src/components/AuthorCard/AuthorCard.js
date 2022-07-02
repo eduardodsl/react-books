@@ -88,6 +88,11 @@ const AuthorProfile = () => {
         
     }
 
+    let description = null;
+    if(author.descriptions && author.descriptions[ currentLang.__lang ]){
+        description = author.descriptions[ currentLang.__lang ];
+    }
+
     return (
         <>
         <section className="author-bio" role="author">
@@ -97,6 +102,8 @@ const AuthorProfile = () => {
                 </div>
                 <div className="author-data-wrapper">
                     <h2>{ author.name }</h2>
+                    { description && ( description.value ) }
+                    { author.wikipedia && ( description.wikipedia ) }
                     <BirthStatus />
                     <GeneralInfo />
                 </div>

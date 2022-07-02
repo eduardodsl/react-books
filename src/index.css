@@ -20,6 +20,18 @@
   --bg-book-3: #575862;
   --bg-book-4: #95806E;
   --bg-book-5: #2A090A;
+  --std-spacing: 20px;
+  --form-spacing: 16px;
+  --input-spacing: 6px;
+}
+
+@media (min-width: 3000px) {
+  :root {
+    --header-height: 520px;
+    --std-spacing: 52px;
+    --form-spacing: 38px;
+    --input-spacing: 12px;
+  }
 }
 
 /*
@@ -51,6 +63,15 @@ ul, li {
 
   .layout {
     width: 1024px;
+    margin: auto;
+  }
+
+}
+
+@media (min-width: 3000px) {
+
+  .layout {
+    width: 2200px;
     margin: auto;
   }
 
@@ -92,6 +113,12 @@ button.main-link {
   font-family: inherit;
   font-size: inherit;
   cursor: pointer;
+}
+
+@media (min-width: 3000px) {
+  body{
+    font-size: 220%;
+  }
 }
 
 /*
@@ -136,27 +163,86 @@ header .bg-wrapper.bg-2{
   background-size: 70%;
 }
 
+@media (max-width: 1024px) {
+  header .bg-wrapper.bg-2{
+    background-position: 50% 110%;
+    background-size: 100%;
+  }
+}
+
 header .locale select {
   color: white;
   background-color: var(--dark-red);
   border: none;
+  font-size: 1em;
   padding: 10px 12px;
+  z-index: 2;
+  position: relative;
 }
 
 header .title{
   height: 180px;
+  position: relative;
+  align-items: center;
   box-sizing: border-box;
+}
+
+header .site-logo {
+  text-align: center;
+}
+
+header .site-logo #logo{
+  width: 100px;
+  animation: rotation 50s infinite linear;
+}
+
+@keyframes rotation{
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+header .site-logo h1{
+  color: white;
+  font-size: 1.8em;
+}
+
+@media (min-width: 1024px) {
+  header .title{
+    display: flex;
+  }
+  
+  header .site-logo {
+    flex-grow: 1;
+    text-align: left;
+  }
+
+  header .site-logo #logo{
+    opacity: .1;
+    vertical-align: middle;
+    z-index: 0;
+    width: 300px;
+    cursor: pointer;
+  }
+  
+  header .site-logo h1{
+    vertical-align: middle;
+    display: inline-block;
+    font-size: 2.2em;
+    cursor: pointer;
+    margin-left: -120px;
+  }
 }
 
 header .search-form{
   background-color: var(--dark-blue);
   height: 64px;
   box-sizing: border-box;
-  padding: 16px;
+  padding: var(--form-spacing);
 }
 
 header .search-form input{
-  padding: 6px;
+  padding: var(--input-spacing);
   width: 100%;
   box-sizing: border-box;
   border: none;
@@ -210,6 +296,27 @@ header .search-form .loading-text.visible {
   display: block;
 }
 
+@media (min-width: 3000px) {
+
+  header .search-form .loading-text {
+    right: 54px;
+    top: 48px;
+  }
+
+  header .title{
+    height: 311px;
+  }
+
+  header .search-form{
+    height: unset;
+  }
+
+  header .bg-wrapper.bg-0{
+    background-size: 10%;
+  }
+
+}
+
 /*
 * ============================================
 * AUTHOR INFO CONTENT
@@ -240,12 +347,12 @@ header .search-form .loading-text.visible {
 }
 
 .author-card .no-author article {
-  padding: 0 20px 20px 20px;
+  padding: 0 var(--std-spacing) var(--std-spacing) var(--std-spacing);
 }
 
 .author-card h2 {
   font-size: 2em;
-  padding: 20px 0;
+  padding: var(--std-spacing) 0;
   color: var(--dark-blue);
 }
 
@@ -285,38 +392,6 @@ header .search-form .loading-text.visible {
 
 .author-card .author-bio img{
   width: 100%;
-}
-
-@media (min-width: 480px) {
-  .author-card .author-books .book-grid{
-    grid-template-columns: 33fr 33fr 33fr;
-  }
-}
-
-@media (min-width: 1024px) {
-
-  .author-card {
-    display: flex;
-    flex-direction: row-reverse;
-  }
-
-  .autor-card section{
-    flex: 1;
-  }
-
-  .author-card .author-bio{
-    width: 300px;
-    flex-shrink: 0;
-  }
-
-  .author-card .author-books{
-    flex-grow: 1;
-  }
-
-  .author-card .author-books .book-grid{
-    grid-template-columns: 25fr 25fr 25fr 25fr;
-  }
-
 }
 
 .author-card .author-books .book-grid .book{
@@ -386,6 +461,53 @@ header .search-form .loading-text.visible {
   box-shadow: 0 0 20px rgba(0,0,0,.8);
 }
 
+@media (min-width: 480px) {
+  .author-card .author-books .book-grid{
+    grid-template-columns: 33fr 33fr 33fr;
+  }
+}
+
+@media (min-width: 1024px) {
+
+  .author-card {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .autor-card section{
+    flex: 1;
+  }
+
+  .author-card .author-bio{
+    width: 300px;
+    flex-shrink: 0;
+  }
+
+  .author-card .author-books{
+    flex-grow: 1;
+  }
+
+  .author-card .author-books .book-grid{
+    grid-template-columns: 25fr 25fr 25fr 25fr;
+  }
+
+}
+
+@media (min-width: 3000px) {
+
+  .author-card .author-bio{
+    width: 500px;
+  }
+
+  .author-card .author-books .book-grid{
+    grid-template-columns: 16.66fr 16.66fr 16.66fr 16.66fr 16.66fr 16.66fr;
+  }
+
+  .author-card .author-books .book-grid .book{
+    height: 460px;
+  }
+}
+
 /*
 * ============================================
 * FOOTER
@@ -394,7 +516,7 @@ header .search-form .loading-text.visible {
 
 footer {
   color: white;
-  padding: 20px;
+  padding: var(--std-spacing);
   text-align: center;
   background-color: var(--dark-blue);
   box-sizing: border-box;

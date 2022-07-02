@@ -2,10 +2,12 @@ import { LocaleContext } from "../../services/LocaleService/LocaleService";
 import React, { useContext } from 'react';
 import { SearchForm } from "../SearchForm/SearchForm";
 import LocaleSelect from '../LocaleSelect/LocaleSelect';
+import { AuthorContext } from "../../services/AuthorService/AuthorService";
 
 const MainHeader = () => {
 
     const { currentLang } = useContext( LocaleContext );
+    const { clearCurrentAuthor } = useContext( AuthorContext );
 
     return (
         <header>
@@ -21,9 +23,10 @@ const MainHeader = () => {
               </LocaleSelect>
             </section>
             <section role="title" className="layout title">
-                  <h1>
-                      { currentLang.app_title }
-                  </h1>
+              <div className="site-logo">
+                <img onClick={ () => clearCurrentAuthor() } id="logo" alt="react books logo" src="react-logo.svg" />
+                <h1 onClick={ () => clearCurrentAuthor() }>{ currentLang.app_title }</h1>
+              </div>
             </section>
             <section role="search" className="layout">
                 <SearchForm />
