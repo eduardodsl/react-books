@@ -27,7 +27,7 @@ const contentData = {
         <article>
             <h2>Serviço React Books</h2>
             <p>
-                Este aplicativo foi desenvolvido parte de um desafio do Bootcamp DIO/TQI. Originalmente foi solicitado criar um sistema de consulta utilizando a API de dados do GitHub
+                Este aplicativo foi desenvolvido como parte de um desafio do Bootcamp DIO/TQI. Originalmente foi solicitado criar um sistema de consulta utilizando a API de dados do GitHub
                 para prática dos React Hooks. Optei por propor uma solução diferente pelas seguintes razões:
             </p>
             <ul>
