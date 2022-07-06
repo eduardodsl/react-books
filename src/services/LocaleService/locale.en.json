@@ -2,7 +2,7 @@
     "__lang": "en",
     "__lang_name": "English",
     "app_title": "React Books Service",
-    "input_search": "please, input your search",
+    "input_search": "please, write an author name",
     "author": "author",
     "author_name": "name",
     "top_work": "top work",

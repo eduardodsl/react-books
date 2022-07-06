@@ -14,7 +14,7 @@ export const AuthorService = ({ children }) => {
     const setCurrentAuthorByID = async (value) => {
         const author = await OpenLibraryService.authorID(value);
         author.wikiDataID = value;
-        setCurrentAuthor(author);
+        await setCurrentAuthor(author);
     }
 
     const setCurrentAuthor = async (value) => {
@@ -43,9 +43,17 @@ export const AuthorService = ({ children }) => {
     }
 
     const [currentAuthor, defineCurrentAuthor] = useState(defaultData);
+    const [ loading, setLoading ] = useState(false);
 
     return (
-        <AuthorContext.Provider value={{currentAuthor, setCurrentAuthor, setCurrentAuthorByID, clearCurrentAuthor}}>
+        <AuthorContext.Provider value={{
+            currentAuthor,
+            setCurrentAuthor,
+            setCurrentAuthorByID,
+            clearCurrentAuthor,
+            loading,
+            setLoading
+        }}>
             {children}
         </AuthorContext.Provider>
     );

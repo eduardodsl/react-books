@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react';
+import { AuthorContext } from '../../services/AuthorService/AuthorService';
 import { LocaleContext } from '../../services/LocaleService/LocaleService';
 import OpenLibraryService from '../../services/OpenLibraryService/OpenLibraryService';
 import SearchItems from './SearchItems';
@@ -8,9 +9,9 @@ let textSearchInterval;
 export const SearchForm = () => {
 
     const { currentLang } = useContext( LocaleContext );
+    const { loading, setLoading } = useContext( AuthorContext );
     const [ searchResults, setSearchResults ] = useState([]);
     const [ visible, setVisible ] = useState(false);
-    const [ loading, setLoading ] = useState(false);
 
     const onBlur = async (e) => {
         setTimeout(() => {

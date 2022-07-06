@@ -10,14 +10,22 @@ export const Content = ({ locale }) => {
 
 const ExampleAuthors = () => {
     
+    const { setLoading } = useContext( AuthorContext );
     const { setCurrentAuthorByID } = useContext( AuthorContext );
+    
+    const setAuthor = async (id) => {
+        setLoading(true);
+        await setCurrentAuthorByID(id);
+        setLoading(false);
+    }
+
     return (<>
-        <BasicButton onClick={ () => setCurrentAuthorByID('OL93286A') } className="main-link">Machado de Assis</BasicButton>,&nbsp;
-        <BasicButton onClick={ () => setCurrentAuthorByID('OL93118A') } className="main-link">Clarice Lispector</BasicButton>,&nbsp;
-        <BasicButton onClick={ () => setCurrentAuthorByID('OL3778242A') } className="main-link">Yuval Noah Harari</BasicButton>,&nbsp;
-        <BasicButton onClick={ () => setCurrentAuthorByID('OL26320A') } className="main-link">J.R.R Tolkien</BasicButton>,&nbsp;
-        <BasicButton onClick={ () => setCurrentAuthorByID('OL118077A') } className="main-link">George Orwell</BasicButton>,&nbsp;
-        <BasicButton onClick={ () => setCurrentAuthorByID('OL2675313A') } className="main-link">Yu Hua</BasicButton>.
+        <BasicButton onClick={ () => setAuthor('OL93286A') } className="main-link">Machado de Assis</BasicButton>,&nbsp;
+        <BasicButton onClick={ () => setAuthor('OL93118A') } className="main-link">Clarice Lispector</BasicButton>,&nbsp;
+        <BasicButton onClick={ () => setAuthor('OL3778242A') } className="main-link">Yuval Noah Harari</BasicButton>,&nbsp;
+        <BasicButton onClick={ () => setAuthor('OL26320A') } className="main-link">J.R.R Tolkien</BasicButton>,&nbsp;
+        <BasicButton onClick={ () => setAuthor('OL118077A') } className="main-link">George Orwell</BasicButton>,&nbsp;
+        <BasicButton onClick={ () => setAuthor('OL2675313A') } className="main-link">Yu Hua</BasicButton>.
     </>)
 
 }
