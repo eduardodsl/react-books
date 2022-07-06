@@ -2,8 +2,8 @@
 
 ## 其他语言
 
-* English
-* Português
+* [English](https://github.com/eduardodsl/react-books/blob/main/README.md)
+* [Português](https://github.com/eduardodsl/react-books/blob/main/README.pt.md)
 
 ## 关于此程序
 

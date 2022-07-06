@@ -2,8 +2,8 @@
 
 ## Other Languages
 
-* Português
-* 中文
+* [Português](https://github.com/eduardodsl/react-books/blob/main/README.pt.md)
+* [中文](https://github.com/eduardodsl/react-books/blob/main/README.zh.md)
 
 ## About
 
