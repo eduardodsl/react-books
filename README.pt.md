@@ -20,4 +20,4 @@ Este aplicativo foi desenvolvido como parte de um desafio do Bootcamp DIO/TQI. O
 
 ## Como Instalar e Executar
 
-Após clonas o repositório, basta executar `npm run` e está pronto.
+Após clonar o repositório, basta executar `npm install` e `npm run start` de dentro dele e está pronto.

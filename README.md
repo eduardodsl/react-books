@@ -20,4 +20,4 @@ This application was developed as part of an DIO/TQI Bootcamp challenge. Origina
 
 ## How to Install and Run
 
-After clonning the repository, just run `npm run` and you are good to go.
+After clonning the repository, just run `npm install` and `npm run start` from its directory and you are good to go.

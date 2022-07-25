@@ -20,4 +20,4 @@
 
 ## 如何安装运行
 
-复制存储库之后，执行 `npm run` 你就完了。
+复制存储库之后，执行 `npm install` 和 `npm run start` 你就完了。
