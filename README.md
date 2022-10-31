@@ -7,6 +7,8 @@
 
 ## About
 
+Live version: [https://dsleite.com.br/projects/react-books](https://dsleite.com.br/projects/react-books)
+
 This application was developed as part of an DIO/TQI Bootcamp challenge. Originally it was intended to create a query app using the GitHub API as means to practice with React Hooks. I chose to propose a different solution for the following reasons:
 
 * Because of the name;

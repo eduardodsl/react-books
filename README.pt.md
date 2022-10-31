@@ -7,6 +7,8 @@
 
 ## Sobre
 
+Versão no ar: [https://dsleite.com.br/projects/react-books](https://dsleite.com.br/projects/react-books)
+
 Este aplicativo foi desenvolvido como parte de um desafio do Bootcamp DIO/TQI. Originalmente foi solicitado criar um sistema de consulta utilizando a API de dados do GitHub para prática dos React Hooks. Optei por propor uma solução diferente pelas seguintes razões:
 
 * Por causa do nome;
